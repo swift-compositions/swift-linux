@@ -39,15 +39,15 @@ let package = Package(
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-molecules/swift-system.git",
+            url: "https://github.com/swift-atoms/swift-system.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-molecules/swift-random.git",
+            url: "https://github.com/swift-atoms/swift-random.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-molecules/swift-error.git",
+            url: "https://github.com/swift-atoms/swift-error.git",
             branch: "main"
         ),
         .package(url: "https://github.com/swift-iso/swift-iso-9945.git", branch: "main"),
