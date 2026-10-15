@@ -124,7 +124,7 @@ let package = Package(
             dependencies: [
                 .product(name: "Linux Kernel System Standard", package: "swift-linux-standard"),
                 .product(name: "ISO 9945 Kernel Thread", package: "swift-iso-9945"),
-                .product(name: "System", package: "swift-system"),
+                .product(name: "System Primitives", package: "swift-system"),
                 .product(name: "Error", package: "swift-error"),
             ]
         ),
@@ -177,7 +177,7 @@ let package = Package(
             name: "Linux System",
             dependencies: [
                 .product(name: "Linux Kernel System Standard", package: "swift-linux-standard"),
-                .product(name: "System", package: "swift-system"),
+                .product(name: "System Primitives", package: "swift-system"),
             ]
         ),
 
