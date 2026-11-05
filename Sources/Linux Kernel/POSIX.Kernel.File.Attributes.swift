@@ -1,5 +1,5 @@
-public import Linux_Kernel_File
-public import POSIX_Kernel
+import Linux_Kernel_File
+import POSIX_Kernel
 
 #if os(Linux)
 
