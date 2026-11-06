@@ -134,18 +134,18 @@ let package = Package(
         .target(
             name: "Linux Kernel",
             dependencies: [
-                "Linux Kernel File",
-                "Linux Kernel Pipe",
-                "Linux Kernel Socket",
-                "Linux Kernel Memory",
-                "Linux Kernel Descriptor",
-                "Linux Kernel Futex",
-                "Linux Kernel System",
-                "Linux Kernel Event",
-                "Linux Kernel IO",
-                "Linux Kernel IO Uring",
-                "Linux Kernel Thread",
-                "Linux Kernel Random",
+                .target(name: "Linux Kernel File"),
+                .target(name: "Linux Kernel Pipe"),
+                .target(name: "Linux Kernel Socket"),
+                .target(name: "Linux Kernel Memory"),
+                .target(name: "Linux Kernel Descriptor"),
+                .target(name: "Linux Kernel Futex"),
+                .target(name: "Linux Kernel System"),
+                .target(name: "Linux Kernel Event"),
+                .target(name: "Linux Kernel IO"),
+                .target(name: "Linux Kernel IO Uring"),
+                .target(name: "Linux Kernel Thread"),
+                .target(name: "Linux Kernel Random"),
 
                 .product(name: "POSIX Kernel", package: "swift-posix"),
                 .product(name: "ISO 9945 Kernel", package: "swift-iso-9945"),
@@ -178,9 +178,9 @@ let package = Package(
         .target(
             name: "Linux Test Support",
             dependencies: [
-                "Linux Kernel",
-                "Linux Loader",
-                "Linux System",
+                .target(name: "Linux Kernel"),
+                .target(name: "Linux Loader"),
+                .target(name: "Linux System"),
             ],
             path: "Tests/Support"
         ),
@@ -188,10 +188,10 @@ let package = Package(
         .testTarget(
             name: "Linux Kernel Tests",
             dependencies: [
-                "Linux Kernel Thread",
-                "Linux Kernel Random",
-                "Linux Kernel IO Uring",
-                "Linux Test Support",
+                .target(name: "Linux Kernel Thread"),
+                .target(name: "Linux Kernel Random"),
+                .target(name: "Linux Kernel IO Uring"),
+                .target(name: "Linux Test Support"),
             ]
         ),
     ],
