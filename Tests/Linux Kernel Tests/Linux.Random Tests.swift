@@ -1,7 +1,9 @@
 import Linux_Kernel_Random
 import Testing
 
-extension Random {
+enum `Random Tests` {}
+
+extension `Random Tests` {
     @Suite
     struct Test {
         @Suite struct Unit {}
@@ -9,7 +11,7 @@ extension Random {
     }
 }
 
-extension Random.Test.Unit {
+extension `Random Tests`.Test.Unit {
     @Test func `entropyNotReady error exists`() {
         let error = Random.Error.entropyNotReady
         #expect(error == .entropyNotReady)
@@ -50,7 +52,7 @@ extension Random.Test.Unit {
     }
 }
 
-extension Random.Test.`Edge Case` {
+extension `Random Tests`.Test.`Edge Case` {
     @Test func `systemError with different codes are distinct`() {
         let a = Random.Error.systemError(1)
         let b = Random.Error.systemError(2)
@@ -66,7 +68,7 @@ extension Random.Test.`Edge Case` {
 
 #if os(Linux)
 
-    extension Random.Test.Unit {
+    extension `Random Tests`.Test.Unit {
         @Test func `Linux Random typealias resolves to Random`() {
             #expect(Linux.Random.self == Random.self)
         }
@@ -76,7 +78,7 @@ extension Random.Test.`Edge Case` {
 
 #if os(Linux)
 
-    extension Random.Test.Unit {
+    extension `Random Tests`.Test.Unit {
         @Test func `fill with non-empty buffer succeeds`() throws {
             var bytes = [UInt8](repeating: 0, count: 32)
             try bytes.withUnsafeMutableBytes { buffer in
