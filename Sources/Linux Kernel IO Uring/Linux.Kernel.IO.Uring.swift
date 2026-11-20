@@ -1,10 +1,11 @@
 #if os(Linux)
 
     public import ISO_9945_Core
+    public import Linux_Kernel_IO_Uring_Standard
     public import ISO_9945_Kernel_Environment
     import POSIX_Kernel
 
-    extension ISO_9945.Kernel.IO.Uring {
+    extension Linux.Kernel.IO.Uring {
 
         public static var isSupported: Bool {
             _isSupported

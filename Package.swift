@@ -33,10 +33,14 @@ let package = Package(
         .library(name: "Linux System", targets: ["Linux System"]),
         .library(name: "Linux Test Support", targets: ["Linux Test Support"]),
     ],
+    traits: [
+        .trait(name: "Loader", description: "Dynamic library loader (dlopen/dlsym)")
+    ],
     dependencies: [
         .package(
             url: "https://github.com/swift-linux-foundation/swift-linux-standard.git",
-            branch: "main"
+            branch: "main",
+            traits: [.trait(name: "Loader", condition: .when(traits: ["Loader"]))]
         ),
         .package(
             url: "https://github.com/swift-atoms/swift-random.git",
@@ -47,7 +51,11 @@ let package = Package(
             branch: "main"
         ),
         .package(url: "https://github.com/swift-iso/swift-iso-9945.git", branch: "main"),
-        .package(url: "https://github.com/swift-compositions/swift-posix.git", branch: "main"),
+        .package(
+            url: "https://github.com/swift-compositions/swift-posix.git",
+            branch: "main",
+            traits: [.trait(name: "Loader", condition: .when(traits: ["Loader"]))]
+        ),
     ],
     targets: [
 

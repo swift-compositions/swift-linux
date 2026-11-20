@@ -1,11 +1,10 @@
 #if os(Linux) || os(Android) || os(OpenBSD)
 
-    public import ISO_9945_Core
-    public import ISO_9945_Kernel_Thread
+    public import Linux_Kernel_System_Standard
 
     extension POSIX.Kernel.Thread {
 
-        public typealias ID = ISO_9945.Kernel.Thread.ID
+        public typealias ID = Linux.Kernel.Thread.ID
     }
 
 #endif

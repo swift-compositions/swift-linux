@@ -5,6 +5,6 @@ import POSIX_Kernel
 
     extension POSIX.Kernel.File.Attributes {
 
-        public typealias Extended = ISO_9945.Kernel.File.Attributes.Extended
+        public typealias Extended = Linux.Kernel.File.Attributes.Extended
     }
 #endif

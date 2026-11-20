@@ -18,8 +18,8 @@ public typealias Linux = Linux_Kernel_System_Standard.Linux
 
 #if os(Linux)
 
-    public import ISO_9945_Core
+    public import Linux_Kernel_IO_Uring_Standard
     extension POSIX.Kernel.IO {
-        public typealias Uring = ISO_9945.Kernel.IO.Uring
+        public typealias Uring = Linux.Kernel.IO.Uring
     }
 #endif
