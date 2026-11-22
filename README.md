@@ -4,6 +4,6 @@ Use this package when your code runs on Linux and needs what only Linux has, suc
 
 ## Laws
 
-- `ISO_9945.Kernel.IO.Uring.isSupported` is worked out once per process by setting up and closing a one-entry ring, so later calls give the same answer. Setting `IO_URING_DISABLED` to exactly `1` makes it false.
+- `` ISO.`9945`.Kernel.IO.Uring.isSupported `` is worked out once per process by setting up and closing a one-entry ring, so later calls give the same answer. Setting `IO_URING_DISABLED` to exactly `1` makes it false.
 - `Random.fill(_:)` fills the whole buffer: it calls `getrandom` again after a short read and after an interruption. A call that returns no bytes is treated as a system error. An empty buffer returns at once.
-- `ISO_9945.Kernel.File.Flush.data(_:)` syncs a file's data with `fdatasync` and retries when interrupted.
+- `` ISO.`9945`.Kernel.File.Flush.data(_:) `` syncs a file's data with `fdatasync` and retries when interrupted.

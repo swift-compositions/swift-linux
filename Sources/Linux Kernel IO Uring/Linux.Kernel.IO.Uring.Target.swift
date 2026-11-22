@@ -6,7 +6,7 @@
     extension Linux.Kernel.IO.Uring.Target {
 
         @_lifetime(borrow fd)
-        public init(descriptor fd: borrowing ISO_9945.Kernel.Descriptor) {
+        public init(descriptor fd: borrowing ISO.`9945`.Kernel.Descriptor) {
             self = .descriptor(fd._rawValue)
         }
     }

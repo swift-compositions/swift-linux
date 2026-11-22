@@ -12,7 +12,7 @@
         }
 
         private static let _isSupported: Bool = {
-            let disabled = unsafe ISO_9945.Kernel.Environment.withValueBytes("IO_URING_DISABLED") {
+            let disabled = unsafe ISO.`9945`.Kernel.Environment.withValueBytes("IO_URING_DISABLED") {
                 span in
                 span.count == 1 && span[0] == UInt8(ascii: "1")
             }
